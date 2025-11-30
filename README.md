@@ -2,15 +2,18 @@
 
 A React replica of the Al Arz ice cream products page.
 
+🌐 **Live Demo:** [https://momen-assaf.github.io/arz-task/](https://momen-assaf.github.io/arz-task/)
+
 ## Features
 
 - Three product sections:
   - حصة واحدة (Single Serving)
   - عبوات عائلية (Family Packages)
   - عبوات للمناسبات (Occasion Packages)
-- Responsive navigation with dropdown menus
-- Product cards with modal view
-- Contact modal
+- Responsive navigation with mobile hamburger menu
+- Product cards with hover effects and modal view
+- Contact footer with company information
+- Hero banner section
 - RTL (Right-to-Left) support for Arabic content
 
 ## Installation
@@ -31,10 +34,10 @@ npm run dev
 npm run build
 ```
 
-## Preview
+## Deploy
 
 ```bash
-npm run preview
+npm run deploy
 ```
 
-# arz-task
+This will build the project and deploy it to GitHub Pages.
