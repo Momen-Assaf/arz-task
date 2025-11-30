@@ -16,6 +16,7 @@
   height: auto;
   display: block;
   object-fit: cover;
+  min-height: 400px;
 }
 
 .hero-content {
@@ -30,5 +31,14 @@
   .hero-section {
     margin-top: 70px;
   }
-}
 
+  .hero-background {
+    min-height: 300px;
+  }
+
+  .hero-banner-image {
+    min-height: 300px;
+    object-fit: cover;
+    object-position: center;
+  }
+}
