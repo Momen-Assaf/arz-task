@@ -1,11 +1,12 @@
 import React from "react";
 import "./Footer.css";
+import { getAssetPath } from "../utils/paths";
 
 function Footer() {
   return (
     <footer className="footer">
       <div className="footer-background">
-        <img src="/img/Contact-Us.jpg" alt="Contact Us Background" />
+        <img src={getAssetPath("/img/Contact-Us.jpg")} alt="Contact Us Background" />
         <div className="footer-overlay"></div>
       </div>
       <div className="footer-content">

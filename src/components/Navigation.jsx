@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Navigation.css";
+import { getAssetPath } from "../utils/paths";
 
 function Navigation({ onContactClick }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -19,7 +20,7 @@ function Navigation({ onContactClick }) {
           <div className="nav-end">
             <div className="nav-logo">
               <a href="#home" onClick={() => scrollToSection("section1")}>
-                <img src="/img/logo-b.png" alt="الآرز" />
+                <img src={getAssetPath("/img/logo-b.png")} alt="الآرز" />
               </a>
             </div>
           </div>
@@ -35,16 +36,16 @@ function Navigation({ onContactClick }) {
               </a>
             </li>
             <li>
-              <a href="#about">من نحن</a>
+              <a href="#about" onClick={() => setIsMenuOpen(false)}>من نحن</a>
             </li>
             <li>
-              <a href="#products">منتجاتنا</a>
+              <a href="#products" onClick={() => setIsMenuOpen(false)}>منتجاتنا</a>
             </li>
             <li>
-              <a href="#news">الاخبار</a>
+              <a href="#news" onClick={() => setIsMenuOpen(false)}>الاخبار</a>
             </li>
             <li>
-              <a href="#contact" onClick={onContactClick}>
+              <a href="#contact" onClick={() => { setIsMenuOpen(false); onContactClick(); }}>
                 اتصل بنا
               </a>
             </li>
@@ -100,7 +101,7 @@ function Navigation({ onContactClick }) {
           </div>
 
           <button
-            className="menu-toggle"
+            className={`menu-toggle ${isMenuOpen ? "active" : ""}`}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >

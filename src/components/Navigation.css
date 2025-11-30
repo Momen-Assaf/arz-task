@@ -164,12 +164,19 @@
 }
 
 @media (max-width: 768px) {
-  .menu-toggle {
-    display: flex;
+  .navbar {
+    padding: 10px 0;
   }
 
   .nav-container {
     min-height: auto;
+    padding: 0 15px;
+  }
+
+  .menu-toggle {
+    display: flex;
+    z-index: 1001;
+    position: relative;
   }
 
   .nav-end {
@@ -177,7 +184,7 @@
   }
 
   .nav-start {
-    align-self: center;
+    display: none;
   }
 
   .nav-logo img {
@@ -186,21 +193,21 @@
 
   .nav-menu {
     position: fixed;
-    top: 70px;
+    top: 0;
     right: -100%;
     flex-direction: column;
     background-color: #fff;
     width: 100%;
-    height: calc(100vh - 70px);
-    padding: 20px;
+    height: 100vh;
+    padding: 80px 20px 20px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    transition: right 0.3s;
+    transition: right 0.3s ease-in-out;
     align-items: flex-start;
     gap: 0;
     overflow-y: auto;
     left: auto;
-    top: auto;
     transform: none;
+    z-index: 1000;
   }
 
   .nav-menu.active {
@@ -216,10 +223,11 @@
   .nav-menu a {
     display: block;
     width: 100%;
+    padding: 10px 0;
   }
 
   .menu-toggle.active span:nth-child(1) {
-    transform: rotate(45deg) translate(8px, 8px);
+    transform: rotate(45deg) translate(7px, 7px);
   }
 
   .menu-toggle.active span:nth-child(2) {
