@@ -1,0 +1,36 @@
+.App {
+  min-height: 100vh;
+  background-color: #fff;
+}
+
+main {
+  padding-top: 0;
+}
+
+.product-section {
+  padding: 60px 0;
+  width: 75%;
+  margin: 0 auto;
+}
+
+.section-title {
+  display: inline-block;
+  margin: 0 0 40px 0;
+  color: #1d4f90;
+  font-size: 40px;
+  font-family: "DINNextLTArabic", "DIN Next LT Arabic", sans-serif;
+  font-weight: 300;
+  text-align: center;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .product-section {
+    padding: 40px 15px;
+  }
+}
+
